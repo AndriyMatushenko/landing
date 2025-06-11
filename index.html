@@ -5,8 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Юридичний асистент | Бакалаврська робота</title>
-    <meta name="description" content="Розробка інформаційної системи для автоматизованого збору та аналізу україномовних юридичних текстів з використанням RAG.">
-    <meta name="author" content="Ваше Ім'я Прізвище">
+    <meta name="description" content="Розробка інформаційної системи для автоматизованого збору та аналізу україномовних юридичних текстів з використанням архітектури RAG.">
+    <meta name="keywords" content="RAG, LLM, юридичний асистент, аналіз тексту, українське законодавство, BM25, Ollama, дипломна робота">
+    <meta name="author" content="Матюшенко Андрій">
+
+    <meta property="og:title" content="Юридичний асистент | Бакалаврська робота">
+    <meta property="og:description" content="Розробка інформаційної системи для автоматизованого збору та аналізу україномовних юридичних текстів з використанням архітектури RAG.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://<your-github-username>.github.io/bs-thesis-landing/">
+    <meta property="og:image" content="https://<your-github-username>.github.io/bs-thesis-landing/assets/og-image.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Thesis",
+      "name": "Інформаційна система автоматизованого збору україномовних юридичних даних",
+      "author": {
+        "@type": "Person",
+        "name": "Ваше Ім'я Прізвище"
+      },
+      "inSupportOf": "Bachelor's Degree",
+      "university": {
+        "@type": "CollegeOrUniversity",
+        "name": "Сумський державний університет"
+      },
+      "abstract": "Метою даної роботи є розробка прототипу інформаційної системи, призначеної для автоматизованого збору, індексації та інтелектуального аналізу україномовних юридичних текстів."
+    }
+    </script>
 
     <link rel="stylesheet" href="style.css">
 
@@ -14,25 +39,100 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="assets/favicon/site.webmanifest">
-    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
 
-    <header>
-        <h1>Юридичний асистент</h1>
+    <header class="header">
+        <div class="container header-container">
+            <img src="assets/sumdu-logo.png" alt="Логотип Сумського державного університету" class="header-logo">
+            <nav class="header-nav">
+                <a href="#about">Проблематика</a>
+                <a href="#goal">Мета</a>
+                <a href="#stack">Технології</a>
+                <a href="#demo">Демо</a>
+                <a href="#contact">Контакти</a>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section>
-            <h2>Про проєкт</h2>
-            <p>Скелет сторінки для представлення бакалаврської роботи.</p>
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <p class="hero-subtitle">Бакалаврська робота</p>
+                <h1 class="hero-title">Інформаційна система автоматизованого збору україномовних юридичних даних</h1>
+                <p class="hero-author">Виконав: здобувач гр. ІН-11, Ваше Ім'я Прізвище</p>
+                <a href="#about" class="btn btn-primary">Дізнатися більше</a>
+            </div>
+        </section>
+
+        <section id="about" class="content-section">
+            <div class="container">
+                <h2>Актуальність та проблематика</h2>
+                <p>Величезні масиви законодавчих актів та судової практики, що постійно оновлюються, створюють значні виклики для ручної обробки. Традиційні методи пошуку є трудомісткими та не завжди дозволяють відстежити останні зміни в законодавстві. Особливої актуальності ця проблема набуває в контексті україномовного юридичного простору, який має свою термінологічну та синтаксичну специфіку. Це вимагає розробки спеціалізованих інструментів, здатних не лише здійснювати повнотекстовий пошук, а й розуміти семантику запиту.</p>
+            </div>
+        </section>
+
+        <section id="goal" class="content-section bg-light">
+            <div class="container">
+                <h2>Мета та завдання дослідження</h2>
+                <p><strong>Метою</strong> даної дипломної роботи є проєктування та розробка програмного прототипу інтелектуальної системи для автоматизованого збору, обробки та аналізу україномовних юридичних даних на основі архітектури Retrieval-Augmented Generation (RAG).</p>
+                <h3>Основні завдання:</h3>
+                <ul>
+                    <li>Провести аналіз предметної області та існуючих рішень у сфері LegalTech.</li>
+                    <li>Розробити програмний модуль для збору даних з відкритих офіційних джерел.</li>
+                    <li>Реалізувати модуль попередньої обробки тексту, що включає очищення, сегментацію та лемматизацію.</li>
+                    <li>Створити ефективний модуль індексування та пошуку на основі алгоритму Okapi BM25.</li>
+                    <li>Інтегрувати в систему локально розгорнуту велику мовну модель (Mistral) за допомогою фреймворку Ollama.</li>
+                    <li>Розробити демонстраційний користувацький інтерфейс за допомогою бібліотеки Gradio.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="stack" class="content-section">
+            <div class="container">
+                <h2>Технологічний стек та методологія</h2>
+                <p>Система побудована на підході <strong>Retrieval-Augmented Generation (RAG)</strong>, що поєднує пошуковий механізм для знаходження релевантних фрагментів документів із потужністю великих мовних моделей (LLM) для генерації обґрунтованих відповідей. Це дозволяє знизити ризик "галюцинацій" та спирати відповіді на актуальні дані.</p>
+                <div class="stack-list">
+                    <span class="stack-item">Python</span>
+                    <span class="stack-item">Requests</span>
+                    <span class="stack-item">BeautifulSoup</span>
+                    <span class="stack-item">NLTK</span>
+                    <span class="stack-item">PyMorphy3</span>
+                    <span class="stack-item">Rank-BM25</span>
+                    <span class="stack-item">Ollama</span>
+                    <span class="stack-item">Mistral 7B</span>
+                    <span class="stack-item">Gradio</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="demo" class="content-section bg-light">
+            <div class="container">
+                <h2>Демонстрація роботи</h2>
+                <div class="gallery">
+                    <figure>
+                        <img src="assets/demo-1.png" alt="Приклад відповіді системи на запит про покарання за крадіжку.">
+                        <figcaption>Приклад відповіді на запит про покарання за крадіжку.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/demo-2.png" alt="Приклад відповіді системи на запит про види адміністративних стягнень.">
+                        <figcaption>Приклад відповіді на запит про види адміністративних стягнень.</figcaption>
+                    </figure>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025</p>
+    <footer id="contact" class="footer">
+        <div class="container">
+            <h2>Контактна інформація</h2>
+            <p><strong>Автор:</strong> Ваше Ім'я Прізвище</p>
+            <p><strong>Email:</strong> ваш.email@example.com</p>
+            <div class="social-links">
+                <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" class="btn">GitHub</a>
+                </div>
+            <p class="copyright">&copy; 2025, Сумський державний університет. Всі права захищено.</p>
+        </div>
     </footer>
 
 </body>
